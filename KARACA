@@ -1,0 +1,12 @@
+#Posible solucion al ejercicio 51 de https://retosdeprogramacion.com/ejercicios/
+#Crea una función que sea capaz de encriptar y desencriptar texto
+# * utilizando el algoritmo de encriptación de Karaca
+# * (debes buscar información sobre él).
+# */
+
+def karaca(texto):
+  diccionario = {"a":"1", "e":"2", "i":"3", "o":"4", "u":"5" }
+
+  texto_cifrado = " ".join("".join(diccionario.get(c,c) for c in palabra[::-1]) +"aca" for palabra in texto.lower().split())
+
+  return texto_cifrado
